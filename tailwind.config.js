@@ -10,6 +10,9 @@ module.exports = {
       },
       fontFamily:{
         "orbitron":["Orbitron", "sans-serif"]
+      },
+      backgroundImage: {
+        'angel': "url('/src/assets/bg-angel.png')"
       }
     },
     duration: {
