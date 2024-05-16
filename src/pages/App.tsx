@@ -5,20 +5,26 @@ import "swiper/css";
 import { Header } from "../components/header";
 import { SocialMedia } from "../types/socialMedia";
 import { SocialMediaCard } from "../components/socialMediaCard";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import SwiperCore from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { EmailForms } from "../components/emailForms";
 
 function App() {
   const sun = require("../assets/sun.png");
   const arrowDown = require("../assets/arrow.png");
   const statue = require("../assets/statue.png");
   const effects = require("../assets/effects.png");
+  const crown = require("../assets/crown.png");
 
   const swiperRef = useRef<any>(null);
+
+  const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const socialMedias: Array<SocialMedia> = [
     {
@@ -38,9 +44,7 @@ function App() {
     },
   ];
 
-
-
-  const projects = [
+  const projects: Array<NodeRequire> = [
     require("../assets/euLirio.png"),
     require("../assets/sukunaProject.png"),
     require("../assets/vinheriaProject.png"),
@@ -48,8 +52,16 @@ function App() {
 
   return (
     <div className=" bg-backgroundDefault flex flex-col overflow-x-hidden">
-      <Header />
-      <section className="w-screen h-screen flex flex-col justify-center items-center">
+      <Header
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        projectRef={projectsRef}
+        contactRef={contactRef}
+      />
+      <section
+        ref={homeRef}
+        className="w-screen h-screen flex flex-col justify-center items-center"
+      >
         <div className="flex h-screen justify-center items-center">
           <img src={sun} alt="" className="absolute h-[600px] w-[750px]" />
           <h1 className="z-10 text-white text-8xl font-orbitron text-glitch">
@@ -63,7 +75,7 @@ function App() {
         />
       </section>
 
-      <section className="w-screen h-screen flex flex-col">
+      <section ref={aboutRef} className="w-screen h-screen flex flex-col">
         <div className="w-screen h-[380px] bg-angel bg-cover flex items-center justify-between">
           <div className="w-[470px] pl-16">
             <h1 className="text-5xl font-orbitron text-white text-center hover:text-glitch">
@@ -130,15 +142,18 @@ function App() {
         </div>
       </section>
 
-      <section className="w-screen h-screen flex flex-col justify-center items-center">
+      <section
+        ref={projectsRef}
+        className="w-screen h-screen flex flex-col justify-center items-center"
+      >
         <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
           Projetos
         </p>
         <div className="h-[700px] w-[1200px] justify-center pt-10">
           <Swiper
             effect={"coverflow"}
-            onSwiper={(swiper:any) => {
-              swiperRef.current = swiper
+            onSwiper={(swiper: any) => {
+              swiperRef.current = swiper;
             }}
             grabCursor={true}
             loop={true}
@@ -158,7 +173,7 @@ function App() {
           >
             {projects.map((uri) => (
               <SwiperSlide>
-                <img src={uri} className="h-[700px] w-[1200px]" />
+                <img src={uri.toString()} className="h-[700px] w-[1200px]" />
               </SwiperSlide>
             ))}
             <div className="slider-controler">
@@ -174,6 +189,20 @@ function App() {
             </div>
           </Swiper>
         </div>
+      </section>
+
+      <section
+        ref={contactRef}
+        className="w-screen h-screen flex flex-col justify-center items-center"
+      >
+        <div className="flex justify-between items-center w-screen">
+          <img src={crown} alt="" className="h-1/2 ml-28" />
+          <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
+            Envie sua mensagem
+          </p>
+          <img src={crown} alt="" className="h-1/2  mr-28" />
+        </div>
+        <EmailForms></EmailForms>
       </section>
     </div>
   );
