@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../styles/index.css";
-import { SocialMedia } from "../types/socialMedia";
-import emailjs, { send } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { validateMail } from "../utils/emailRegex";
 

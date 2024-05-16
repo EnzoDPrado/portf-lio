@@ -63,7 +63,7 @@ function App() {
         className="w-screen h-screen flex flex-col justify-center items-center"
       >
         <div className="flex h-screen justify-center items-center">
-          <img src={sun} alt="" className="absolute  " />
+          <img src={sun} alt="sun vaporwave img" className="absolute  " />
           <h1 className="z-10 text-white text-8xl font-orbitron text-glitch">
             Enzo D. Prado
           </h1>
@@ -125,7 +125,7 @@ function App() {
 
         <div className="flex flex-col justify-center items-center pt-32 h-auto">
           <div className="w-screen items-start justify-start z-0 relative">
-            <img src={effects} alt="" className="absolute top-[-180px] " />
+            <img src={effects} alt="effect effect" className="absolute top-[-180px] " />
           </div>
           <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
             Contato - コンタクト
@@ -196,11 +196,11 @@ function App() {
         className="w-screen flex flex-col justify-center items-center"
       >
         <div className="flex justify-between items-center w-screen">
-          <img src={crown} alt="" className="h-1/2 ml-28" />
+          <img src={crown} alt="crown vaporwave" className="h-1/2 ml-28" />
           <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
             Envie sua mensagem
           </p>
-          <img src={crown} alt="" className="h-1/2  mr-28" />
+          <img src={crown} alt="crown vaporwave" className="h-1/2  mr-28" />
         </div>
         <EmailForms></EmailForms>
       </section>
