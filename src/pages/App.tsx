@@ -173,7 +173,7 @@ function App() {
           >
             {projects.map((uri) => (
               <SwiperSlide>
-                <img src={uri.toString()} className="h-[700px] w-[1200px]" />
+                <img src={uri.toString()} alt="project" className="h-[700px] w-[1200px]" />
               </SwiperSlide>
             ))}
             <div className="slider-controler">
