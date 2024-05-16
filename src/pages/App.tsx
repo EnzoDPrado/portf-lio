@@ -1,32 +1,49 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../styles/index.css";
 import "../styles/reset.css";
-
+import "swiper/css";
 import { Header } from "../components/header";
 import { SocialMedia } from "../types/socialMedia";
 import { SocialMediaCard } from "../components/socialMediaCard";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import SwiperCore from "swiper";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 function App() {
   const sun = require("../assets/sun.png");
   const arrowDown = require("../assets/arrow.png");
   const statue = require("../assets/statue.png");
-  const effects = require("../assets/effects.png")
+  const effects = require("../assets/effects.png");
+
+  const swiperRef = useRef<any>(null);
 
   const socialMedias: Array<SocialMedia> = [
     {
       name: "Instagram",
       username: "enzo_skr15",
-      link: "https://www.instagram.com/enzo_skr15/"
+      link: "https://www.instagram.com/enzo_skr15/",
     },
     {
-      name:"Linkedlin",
-      username:"Enzo Diógenes do Prado",
-      link: "https://www.linkedin.com/in/enzo-di%C3%B3genes-do-prado-8b4abb239/"
+      name: "Linkedlin",
+      username: "Enzo Diógenes do Prado",
+      link: "https://www.linkedin.com/in/enzo-di%C3%B3genes-do-prado-8b4abb239/",
     },
     {
       name: "Github",
-      username:"EnzoDPrado",
-      link: "https://github.com/EnzoDPrado"
-    }
+      username: "EnzoDPrado",
+      link: "https://github.com/EnzoDPrado",
+    },
+  ];
+
+
+
+  const projects = [
+    require("../assets/euLirio.png"),
+    require("../assets/sukunaProject.png"),
+    require("../assets/vinheriaProject.png"),
   ];
 
   return (
@@ -96,7 +113,7 @@ function App() {
 
         <div className="flex flex-col justify-center items-center pt-32">
           <div className="w-screen items-start justify-start z-0 relative">
-            <img src={effects} alt="" className="absolute top-[-180px]"/>
+            <img src={effects} alt="" className="absolute top-[-180px]" />
           </div>
           <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
             Contato - コンタクト
@@ -110,6 +127,52 @@ function App() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="w-screen h-screen flex flex-col justify-center items-center">
+        <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
+          Projetos
+        </p>
+        <div className="h-[700px] w-[1200px] justify-center pt-10">
+          <Swiper
+            effect={"coverflow"}
+            onSwiper={(swiper:any) => {
+              swiperRef.current = swiper
+            }}
+            grabCursor={true}
+            loop={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            pagination={{ el: ".swiper-pagination", clickable: true }}
+            className="swiper_container"
+          >
+            {projects.map((uri) => (
+              <SwiperSlide>
+                <img src={uri} className="h-[700px] w-[1200px]" />
+              </SwiperSlide>
+            ))}
+            <div className="slider-controler">
+              <div
+                className="swiper-button-prev slider-arrow"
+                onClick={() => swiperRef.current.slidePrev()}
+              ></div>
+              <div
+                className="swiper-button-next slider-arrow"
+                onClick={() => swiperRef.current.slideNext()}
+              ></div>
+              <div className="swiper-pagination"></div>
+            </div>
+          </Swiper>
         </div>
       </section>
     </div>
