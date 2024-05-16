@@ -63,7 +63,7 @@ function App() {
         className="w-screen h-screen flex flex-col justify-center items-center"
       >
         <div className="flex h-screen justify-center items-center">
-          <img src={sun} alt="" className="absolute h-[600px] w-[750px]" />
+          <img src={sun} alt="" className="absolute  " />
           <h1 className="z-10 text-white text-8xl font-orbitron text-glitch">
             Enzo D. Prado
           </h1>
@@ -77,7 +77,7 @@ function App() {
 
       <section ref={aboutRef} className="w-screen h-screen flex flex-col">
         <div className="w-screen h-[380px] bg-angel bg-cover flex items-center justify-between">
-          <div className="w-[470px] pl-16">
+          <div className="max-w-96 pl-16">
             <h1 className="text-5xl font-orbitron text-white text-center hover:text-glitch">
               Sobre mim
             </h1>
@@ -123,9 +123,9 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center pt-32">
+        <div className="flex flex-col justify-center items-center pt-32 h-auto">
           <div className="w-screen items-start justify-start z-0 relative">
-            <img src={effects} alt="" className="absolute top-[-180px]" />
+            <img src={effects} alt="" className="absolute top-[-180px] " />
           </div>
           <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
             Contato - コンタクト
