@@ -193,7 +193,7 @@ function App() {
 
       <section
         ref={contactRef}
-        className="w-screen h-screen flex flex-col justify-center items-center"
+        className="w-screen flex flex-col justify-center items-center"
       >
         <div className="flex justify-between items-center w-screen">
           <img src={crown} alt="" className="h-1/2 ml-28" />
