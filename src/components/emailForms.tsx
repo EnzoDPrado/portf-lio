@@ -44,8 +44,8 @@ export const EmailForms = () => {
     if (isValidated) {
       const templateParams = {
         from_name: username,
-        message: userMail,
-        email: message,
+        message: message,
+        email: userMail,
       };
       setIsloading(true)
       emailjs
