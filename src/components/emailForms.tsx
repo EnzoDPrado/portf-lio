@@ -78,14 +78,14 @@ export const EmailForms = () => {
           value={username}
           onChange={(value) => setUsername(value.target.value)}
           placeholder="Seu nome"
-          className="h-20 lg:w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
+          className="h-20 lg:w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-xl lg:text-3xl text-white pl-4"
         />
         <input
           placeholder="Seu email"
           type="text"
           value={userMail}
           onChange={(value) => setUserMail(value.target.value)}
-          className="h-20 lg:w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
+          className="h-20 lg:w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-xl lg:text-3xl text-white pl-4"
         />
       </div>
       <input
@@ -93,21 +93,21 @@ export const EmailForms = () => {
         placeholder="Assunto"
         value={subject}
         onChange={(value) => setSubject(value.target.value)}
-        className="h-20 lg:ml-28 lg:mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
+        className="h-20 lg:ml-28 lg:mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-xl lg:text-3xl text-white pl-4"
       />
       <textarea
         placeholder="Mensagem"
         value={message}
         maxLength={1000}
         onChange={(value) => setMessage(value.target.value)}
-        className="h-96 lg:ml-28 lg:mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
+        className="h-96 lg:ml-28 lg:mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-xl lg:text-3xl text-white pl-4"
       />
       <div className="flex justify-end pb-4">
         <input
           type="submit"
           value={loading ? "Enviando..." : "Enviar"}
           disabled={loading}
-          className="lg:mr-28 bg-backgroundDefault border-2 rounded-2xl h-28 w-64 text-white font-orbitron text-3xl"
+          className="lg:mr-28 bg-backgroundDefault border-2 rounded-2xl h-28 w-64 text-white font-orbitron text-xl lg:text-3xl"
         />
       </div>
     </form>
