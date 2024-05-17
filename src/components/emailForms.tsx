@@ -72,7 +72,7 @@ export const EmailForms = () => {
 
   return (
     <form onSubmit={sendEmail} className="w-screen flex flex-col gap-3 pl-4 pr-4">
-      <div className="flex  flex-col lg:flex-row justify-between lg:pl-28 lg:pr-28 lg:gap-11">
+      <div className="flex  flex-col lg:flex-row justify-between lg:pl-28 lg:pr-28 lg:gap-11 gap-3">
         <input
           type="text"
           value={username}
