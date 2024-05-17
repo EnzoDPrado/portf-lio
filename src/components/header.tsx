@@ -36,30 +36,30 @@ export const Header = (props: HeaderParams) => {
   };
 
   return (
-    <div className="h-20 w-screen z-20 pl-14 pr-14 flex justify-between items-center fixed bg-backgroundDefault">
-      <img src={logo} alt="logo" className="h-20 w-28" />
+    <div className="h-20 w-screen lg:pl-14 lg:pr-14 flex justify-center lg:justify-between items-center fixed bg-backgroundDefault z-50">
+      <img src={logo} alt="logo" className="h-20 w-28 hidden sm:block" />
       <ul className="flex gap-8">
         <li
           onClick={scrollToHome}
-          className="font-orbitron text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
+          className="font-orbitron lg:text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
         >
           home
         </li>
         <li
           onClick={scrollToAbout}
-          className="font-orbitron text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
+          className="font-orbitron lg:text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
         >
           sobre
         </li>
         <li
           onClick={scrollToProjects}
-          className="font-orbitron text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
+          className="font-orbitron lg:text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
         >
           projetos
         </li>
         <li
           onClick={scrollToContact}
-          className="font-orbitron text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
+          className="font-orbitron lg:text-3xl hover:text-glitch text-glitch-duration-slow text-white cursor-pointer"
         >
           contato
         </li>

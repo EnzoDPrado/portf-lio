@@ -72,20 +72,20 @@ export const EmailForms = () => {
 
   return (
     <form onSubmit={sendEmail} className="w-screen flex flex-col gap-3">
-      <div className="flex w-screen justify-between pl-28 pr-28 gap-11">
+      <div className="flex w-screen flex-col lg:flex-row justify-between lg:pl-28 lg:pr-28 lg:gap-11">
         <input
           type="text"
           value={username}
           onChange={(value) => setUsername(value.target.value)}
           placeholder="Seu nome"
-          className="h-20 w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white pl-4"
+          className="h-20 lg:w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
         />
         <input
           placeholder="Seu email"
           type="text"
           value={userMail}
           onChange={(value) => setUserMail(value.target.value)}
-          className="h-20 w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white pl-4"
+          className="h-20 lg:w-6/12 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
         />
       </div>
       <input
@@ -93,21 +93,21 @@ export const EmailForms = () => {
         placeholder="Assunto"
         value={subject}
         onChange={(value) => setSubject(value.target.value)}
-        className="h-20 ml-28 mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white pl-4"
+        className="h-20 lg:ml-28 lg:mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
       />
       <textarea
         placeholder="Mensagem"
         value={message}
         maxLength={1000}
         onChange={(value) => setMessage(value.target.value)}
-        className="h-96 ml-28 mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white pl-4"
+        className="h-96 lg:ml-28 lg:mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
       />
       <div className="w-screen flex justify-end ">
         <input
           type="submit"
           value={loading ? "Enviando..." : "Enviar"}
           disabled={loading}
-          className="mr-28 bg-backgroundDefault border-2 rounded-2xl h-28 w-64 text-white font-orbitron text-3xl"
+          className="lg:mr-28 bg-backgroundDefault border-2 rounded-2xl h-28 w-64 text-white font-orbitron text-3xl"
         />
       </div>
     </form>
