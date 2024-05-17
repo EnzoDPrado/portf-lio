@@ -71,8 +71,8 @@ export const EmailForms = () => {
   };
 
   return (
-    <form onSubmit={sendEmail} className="w-screen flex flex-col gap-3">
-      <div className="flex w-screen flex-col lg:flex-row justify-between lg:pl-28 lg:pr-28 lg:gap-11">
+    <form onSubmit={sendEmail} className="w-screen flex flex-col gap-3 pl-4 pr-4">
+      <div className="flex  flex-col lg:flex-row justify-between lg:pl-28 lg:pr-28 lg:gap-11">
         <input
           type="text"
           value={username}
@@ -102,7 +102,7 @@ export const EmailForms = () => {
         onChange={(value) => setMessage(value.target.value)}
         className="h-96 lg:ml-28 lg:mr-28 bg-backgroundDefault border-2 rounded-2xl font-orbitron text-3xl text-white lg:pl-4"
       />
-      <div className="w-screen flex justify-end ">
+      <div className="flex justify-end pb-4">
         <input
           type="submit"
           value={loading ? "Enviando..." : "Enviar"}

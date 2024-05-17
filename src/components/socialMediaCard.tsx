@@ -22,12 +22,12 @@ export const SocialMediaCard = (props: SocialMedia) => {
   }
 
   return (
-    <div className="flex flex-col justify-between items-center h-80 w-96 border cursor-pointer" onClick={() => window.open(props.link, '_blank')}>
+    <div className="flex flex-col justify-between items-center h-80 lg:w-96 border cursor-pointer" onClick={() => window.open(props.link, '_blank')}>
       <p className="text-[40px] font-orbitron text-white text-center hover:text-glitch pt-6">
         {props.name}
       </p>
       <img src={icon} alt="social media icon" className="h-20 w-20" />
-      <p className="text-2xl font-orbitron text-white text-center hover:text-glitch pb-6">
+      <p className="text-2xl font-orbitron text-white text-center hover:text-glitch pb-6 pr-1 pl-1">
         {props.username}
       </p>
     </div>

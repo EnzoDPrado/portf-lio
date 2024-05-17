@@ -79,9 +79,9 @@ function App() {
         ref={aboutRef}
         className="w-screen flex flex-col justify-center items-center pt-28 "
       >
-        <div className="w-screen h-[100vh] lg:h-[380px] pt-5 pb-5 bg-angel bg-cover flex flex-col lg:flex-row items-center justify-between">
+        <div className="w-screen pl-4 pr-4 gap-10 lg:pl-0 lg:pr-0 lg:gap-0 lg:h-[380px] pt-5 pb-5 bg-angel bg-cover flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:max-w-96 lg:pl-16 justify-center flex flex-col items-center">
-            <h1 className="text-5xl font-orbitron text-white hover:text-glitch text-center">
+            <h1 className="lg:text-5xl text-4xl font-orbitron text-white hover:text-glitch text-center">
               Sobre mim
             </h1>
             <p className="text-base text-white font-orbitron text-center pt-8">
@@ -97,7 +97,7 @@ function App() {
           </div>
           <img src={statue} alt="statue" className="h-44 w-44" />
           <div className="w-[470px] lg:pr-16 flex flex-col justify-center items-center z-20">
-            <h1 className="text-5xl font-orbitron text-white text-center hover:text-glitch">
+            <h1 className="lg:text-5xl text-4xl font-orbitron text-white text-center hover:text-glitch">
               Proeficiências
             </h1>
             <ul className="pt-8">
@@ -134,10 +134,10 @@ function App() {
               className="absolute top-[-180px] "
             />
           </div>
-          <p className="text-5xl font-orbitron text-white text-center hover:text-glitch z-10">
+          <p className="lg:text-5xl  text-4xl font-orbitron text-white text-center hover:text-glitch z-10">
             Contato - コンタクト
           </p>
-          <div className="w-screen flex flex-col justify-between gap-10 lg:flex-row lg:pl-16 lg:pr-16 lg:pt-10 lg:z-10">
+          <div className=" flex flex-col justify-between gap-10 lg:flex-row lg:pl-16 lg:pr-16 lg:pt-10 lg:z-10">
             {socialMedias.map((socialMedia) => (
               <SocialMediaCard
                 name={socialMedia.name}
